@@ -1,0 +1,130 @@
+// RESET CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    header {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // height: 80px;
+            padding: 5px 30px;
+            .logo {
+                font-size: 30px;
+                text-decoration: none;
+                color: navy;
+            }
+            .navlinks {
+                a {
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: black;
+                    margin: 0 15px;
+                }
+        
+            }
+            .hamb {
+                display: none;
+            }
+            .hamb {
+                width: 50px;
+                height: 50px;
+                margin-top: 32px;
+                .hamb-span {
+                    width: 20px;
+                    height: 2px;
+                    display: block;
+                    background-color: black;
+                    margin: 5px;
+                }
+            }
+        }
+   
+    }
+    main {
+        .mobile-menu {
+            background-color: rgba(33, 72, 131, 0.644);
+            display: none;
+            a {
+                text-decoration: none;
+                // color: navy;
+                color: white;
+                display: block;
+                padding: 15px 30px;
+            }
+        }
+        .login-form {
+            width: 400px;
+            border: 1px solid;
+            padding: 40px 25px;
+            position: relative;
+            box-shadow: 3px 2px 3px gray;
+            border-radius: 20px;
+            text-align: center;
+            background-color: white;
+            input {
+                display: block;
+                width: 100%;
+                height: 45px;
+                border-radius: 6px;
+                outline: wheat;
+                margin: 15px 0;
+                .fa-close {
+                    position: absolute;
+                    right: 18px;
+                    top: 5px;
+                    color: navy;
+                }
+            }
+            input::placeholder{
+                padding-left: 20px;
+                font-size: 14px;
+                color: red;
+            }
+            .btn-login {
+                width: 130px;
+                height: 50px;
+                border-radius: 20px;
+                border: none;
+                background-color: orange;
+            }
+        }
+        #overlay {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(117, 230, 237, 0.297);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+   body {
+       header {
+           nav {
+            .navlinks {
+                display: none;
+            }
+            .hamb {
+                display: block;
+                cursor: pointer;
+            }
+           }
+           .mobile-menu {
+               width: 100%;
+               position: absolute;
+               display: none;
+           }
+           .show-menu {
+               display: block;
+           }
+       }
+   }
+}
+
